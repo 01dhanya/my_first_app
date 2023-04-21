@@ -9,7 +9,7 @@ public class MyApp {
         System.out.println("HELLO WORLD!!!!");
         try {
             // Load the image file
-            File imageFile = new File("7.png");
+            File imageFile = new File("src/main/resources/max.png");
             BufferedImage image = ImageIO.read(imageFile);
 
             // Resize the image to a smaller size for better ASCII representation
