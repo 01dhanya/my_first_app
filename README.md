@@ -83,7 +83,7 @@ You have two options to authenticate when pushing a change to your repository :
 Send me your git repo link on discord through direct message by **Friday, 21th April, 5pm**.
 
 ANSWERS
-![](doc//docker_output)
-![](doc//myapp_output)
+![](doc//docker)
+![](doc//myapp)
 
 
