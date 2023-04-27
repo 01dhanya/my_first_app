@@ -1,15 +1,30 @@
 package com.nagra;
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-
+import java.lang.*;
+import java.util.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 public class MyApp {
-    public static void main(String[] args) {
-        System.out.println("HELLO WORLD!!!!");
-        try {
+    public static void main(String[] args) throws Exception {
+        while (true){
+
+            URL url = new URL("https://icanhazdadjoke.com/");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setRequestProperty("Accept", "application/json");
+
+            Scanner scanner = new Scanner(connection.getInputStream());
+            String response = scanner.useDelimiter("\\A").next();
+            scanner.close();
+
+            String joke = response.split("\"joke\":\"")[1].split("\",\"")[0];
+
+            // Display the joke
+            System.out.println(joke);
             // Load the image file
-            File imageFile = new File("src/main/resources/max.png");
+            File imageFile = new File("words.png");
             BufferedImage image = ImageIO.read(imageFile);
 
             // Resize the image to a smaller size for better ASCII representation
@@ -33,9 +48,8 @@ public class MyApp {
 
             // Print the ASCII art
             System.out.println(sb.toString());
+            Thread.sleep(15000);
 
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
         }
     }
 }
