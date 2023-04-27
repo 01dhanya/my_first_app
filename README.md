@@ -81,3 +81,16 @@ You have two options to authenticate when pushing a change to your repository :
 - Refer to https://www.markdownguide.org/basic-syntax/ to learn about markdown syntax (ie. how to include pictures)
 ## Deadline
 Send me your git repo link on discord through direct message by **Friday, 21th April, 5pm**.
+
+ANSWERS
+![](doc//docker.png)
+![](doc//myapp.png)
+
+
+What is the prerequisite for another machine to run your application if you provide it the docker image ?
+The main prerequisite for running a Docker image on another machine is that the machine has Docker installed and the Docker image includes everything necessary to run the application.
+
+What is the difference between a virtual machine and a docker container ?
+The main difference between a virtual machine and a Docker container is that a virtual machine emulates an entire operating system and runs on top of a hypervisor, while a Docker container shares the host operating system kernel and runs on top of a container runtime. This makes Docker containers more lightweight, portable, and efficient than virtual machines.A virtual machine is independent of the host operating system, making it compatible with all operating systems, while a Docker container is compatible with any Linux distribution.
+
+
